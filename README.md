@@ -1,30 +1,31 @@
-# Arduino 3.7 - Conditionals II
-## For our final programming assignment you will use an analog sensor to control output with conditionals. 
+# Arduino 3.8 - Distance Sensing
+## For this programming assignment we will use the HC-SRO4 distance sensor to initiate a change in a light display based on distance to an object.
 
-### This assignment will use the concepst learned using `analogRead()` and control of the RGB LED from previous assignments.  The conditionals `if()`, `else if()` and `else` will be needed to solve this problem.
+### The conditionals `if()`, `else if()` and `else` will be needed to solve this problem.  Additionally, be sure to look up how to use the [HC-SR04 Ultrasonic Sensor](https://www.sparkfun.com/products/15569) before proceeding.  There are many tutorials on the internet that help you figure out how to use it.
 ---
 
-### Step One: Build the Circuit
+### Step One: Build and Test the Circuit
 
-Build your circuit according to this schematic:
+As mentioned above, there are many tutorials available to learn to use this sensor.  Hook it up according to those instructions.  If you have not done so already, use the Serial Monitor to print the value recorded in centimeters from the sensor.  
 
-![](https://github.com/WHS-Robotics-Classes/Conditionals_II/blob/main/Analog_Input_Control.PNG?raw=true)
+In addition, connect a red, yellow and green LEDs to the Arduino to three digital output pins of your choosing.  Remember the resistors.
 
-### Step Two: Break down the process
+### Step Two: Write the Code
 
-The best way to handle a comples task is to break it into parts:
-1. Make the RGB LED produce the seven colors of the rainbow (Draw on what you did in the previous assignment).
-2. Read the potentiometer with `analogRead()`
-3. Review how to use [`if()`](https://www.arduino.cc/reference/en/language/structure/control-structure/if/) and [`else`](https://www.arduino.cc/reference/en/language/structure/control-structure/else/) on the Arduino Reference.
+You functioning prototype should do the following:
 
-### Step Three: Put the Code Together
+- Print the dinstance in centimeters in the Serial Monitor in the manner shown below:
+- Turn on the various lights according to the following rules (only one color is on at a time):
+   - Green is on when distance is greater than 30 cm
+   - Yellow is on when distance is between 10 and 30 cm
+   - Red is on when distance is less than 10 cm.
 
-Your prototype should change the color of the LED as you turn the potentiometer.  It needs to cycle through the colors of the rainbow (ROYGBIV) in order as it does.
+![LEDs](https://user-images.githubusercontent.com/22602103/141160587-bc7c7cf3-101c-4bfb-af45-fff4f5441ba1.png)
 
-Use the video below as a reference.
+### Step Three: Debug and Submit
 
-### Step Four: Debug and Submit
+Make sure your prototype behaves according to those directions above and as the demo in class does.   As in the previous assignments, make a new file here on GitHub. Name it 3.8-Distance_Sensing.ino and Commit it to the repository.  Record a video of your working prototype and submit on Canvas.
 
-[![3.6_Video](http://img.youtube.com/vi/T9klXaB8NdI/0.jpg)](https://www.youtube.com/watch?v=T9klXaB8NdI "3.6-Conditionals I")
+### Additional Challenges
 
-Make sure your prototype behaves the same way as the one in the video. As in the previous assignment, make a new file here on GitHub. Name it 3.7_Analog_Input_Control.ino and Commit it to the repository.
+For some extra credit, use the RGB LED instead of three individual LEDs but accomplish the same result.  Another option could be to initiate a change in another output device which we have previously used like a servo or one we have not like the piezo buzzer.  All requirements above should be met in additon to any extra actuators.
