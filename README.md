@@ -6,7 +6,7 @@
 
 ### Step One: Build and Test the Circuit
 
-As mentioned above, there are many tutorials available to learn to use this sensor.  Hook it up according to those instructions.  If you have not done so already, use the Serial Monitor to print the value recorded in centimeters from the sensor.  
+As mentioned above, there are many tutorials available to learn to use this sensor.  An example of one may be found [here](https://github.com/gamegine/HCSR04-ultrasonic-sensor-lib).
 
 In addition, connect a red, yellow and green LEDs to the Arduino to three digital output pins of your choosing.  Remember the resistors.
 
